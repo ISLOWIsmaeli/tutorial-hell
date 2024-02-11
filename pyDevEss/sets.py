@@ -23,3 +23,8 @@ print("fig" in fruits3)
 fruits3.add("mango")
 fruits3.update(newFruits3)
 print(fruits3)
+fruits3.remove("mango")#if doesn't exist, raises an error
+print(fruits3)
+fruits3.discard("fig") #if doesn't exist does not raise an error
+fruits3.clear() #empties all sets
+print(fruits3)
