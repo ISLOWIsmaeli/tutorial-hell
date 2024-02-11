@@ -13,8 +13,13 @@ print(type(fruits2)) # class set
 print(fruitss)
 
 fruits3={"watermelon","cherry","fig"}
+newFruits3={"passion","guava"}
 
 for item in fruits3:
     print(item)
 
 print("fig" in fruits3)
+
+fruits3.add("mango")
+fruits3.update(newFruits3)
+print(fruits3)
