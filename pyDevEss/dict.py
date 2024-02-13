@@ -4,12 +4,17 @@ person = {
     "age":30,
     "country": "Germany",
 }
-
-person["age"] = 40
-person.update({"age":30})
-person.update({"id":21,"number":50})
-
+person.clear()
+# person.pop("age")
+# person.popitem()
+# del person
+# del person["age"]
 print(person)
+# person["age"] = 40
+# person.update({"age":30})
+# person.update({"id":21,"number":50})
+
+# print(person)
 # x = person["name"]
 # y= person.get("name")
 # k = person.keys()
