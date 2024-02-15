@@ -13,3 +13,14 @@ else:
 fruits=["banana","orange","apple"]
 for item in fruits:
     print(item)
+
+fruit = "banana"
+for x in fruit:
+    print(x)
+    if x == "n":
+        break
+#last item is not included in the loop
+for x in range(0,74,3):
+    print(x)
+else: 
+    print("says what to do after for loop completes")
