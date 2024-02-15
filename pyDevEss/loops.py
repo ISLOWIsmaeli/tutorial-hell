@@ -8,3 +8,8 @@ while x <7:
     print(x)
 else:
     print("x is no longer less than 7")
+
+#for loops
+fruits=["banana","orange","apple"]
+for item in fruits:
+    print(item)
