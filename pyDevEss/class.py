@@ -8,8 +8,13 @@ class Person:
 newPerson = Person("Ismael","Lennox")
 anotherOne = Person("Sylus","Ojore")
 
+newPerson.fname = "Cris"
+
 print(newPerson)
 print(newPerson.fname)
 print(newPerson.lname)
 print(anotherOne)
 print(anotherOne.fname)
+
+del newPerson.fname #deleted the property hence cannot be accessed
+print(newPerson.fname)
