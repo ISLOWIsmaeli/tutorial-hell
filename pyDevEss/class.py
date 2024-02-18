@@ -17,4 +17,5 @@ print(anotherOne)
 print(anotherOne.fname)
 
 del newPerson.fname #deleted the property hence cannot be accessed
+del newPerson #deleted the whole object
 print(newPerson.fname)
