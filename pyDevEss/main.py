@@ -1,5 +1,12 @@
-import newModule
+import newModule as any
+import platform
+from newModule import player
 
-newModule.new("Ismael")
-x=newModule.player["name"]
-print(x)
+any.new("Ismael")
+x=any.player["name"]
+y=any.player["age"]
+print(x,y)
+
+op =dir(platform)
+print(op) #prints all functions within a given module
+print(help('modules'))

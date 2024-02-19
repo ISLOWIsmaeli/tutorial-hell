@@ -3,4 +3,5 @@ def new(name):
 
 player={
     "name":"Ismael",
+    "age":23,
 }
