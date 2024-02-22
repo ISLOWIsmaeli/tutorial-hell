@@ -5,11 +5,15 @@
 # print(next(newit))
 # print(next(newit))
 # print(next(newit))
-fruitstr="lemon"
-newit=iter(fruitstr)
+# fruitstr="lemon"
+# newit=iter(fruitstr)
 
-print(next(newit))
-print(next(newit))
-print(next(newit))
-print(next(newit))
-print(next(newit))
+# print(next(newit))  
+# print(next(newit))
+# print(next(newit))  
+# print(next(newit))
+# print(next(newit))  
+fruitstuple = ("anana","lemon","apple")
+
+for i in fruitstuple:
+    print(i)
