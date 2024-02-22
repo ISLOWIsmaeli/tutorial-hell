@@ -13,7 +13,9 @@
 # print(next(newit))  
 # print(next(newit))
 # print(next(newit))  
-fruitstuple = ("anana","lemon","apple")
-
+fruitstuple = ("banana","lemon","apple")
+fruitstr = "lemon"
 for i in fruitstuple:
+    print(i)
+for i in fruitstr:
     print(i)
