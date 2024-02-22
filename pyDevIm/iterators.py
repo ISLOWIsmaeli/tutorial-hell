@@ -13,9 +13,29 @@
 # print(next(newit))  
 # print(next(newit))
 # print(next(newit))  
-fruitstuple = ("banana","lemon","apple")
-fruitstr = "lemon"
-for i in fruitstuple:
-    print(i)
-for i in fruitstr:
-    print(i)
+# fruitstuple = ("banana","lemon","apple")
+# fruitstr = "lemon"
+# for i in fruitstuple:
+#     print(i)
+# for i in fruitstr:
+#     print(i)
+class Counting:
+    def __iter__(self):
+        self.a=1
+        return self
+    def __next__(self):
+        x=self.a
+        self.a +=1
+        return x
+    
+newObbj=Counting()
+newit=iter(newObbj)
+
+print(next(newit))
+print(next(newit))
+print(next(newit))
+print(next(newit))
+print(next(newit))
+print(next(newit))
+
+print(newit.__iter__)
