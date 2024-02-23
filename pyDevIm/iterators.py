@@ -24,18 +24,15 @@ class Counting:
         self.a=1
         return self
     def __next__(self):
-        x=self.a
-        self.a +=1
-        return x
+        if self.a <=19:
+            x=self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
     
 newObbj=Counting()
 newit=iter(newObbj)
 
-print(next(newit))
-print(next(newit))
-print(next(newit))
-print(next(newit))
-print(next(newit))
-print(next(newit))
-
-print(newit.__iter__)
+for x in newit:
+    print(x)
