@@ -4,10 +4,24 @@
 #         print(x)
 #     newIn()
 # newOut()
-x =100
+# x =100
 
+# def newfunc():
+#     print(x)
+
+# newfunc()
+# print(x)
+# x=100
+# def newfunc():
+#     x=50
+#     print(x)
+# newfunc()
+# print(x)
+x=100
 def newfunc():
-    print(x)
+    global x
+    x=50
 
 newfunc()
+
 print(x)
