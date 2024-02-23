@@ -4,5 +4,11 @@
 quantity =5
 itemNumber = 50
 price =24
-firstOrder ="We want {} pieces of item number {} for {:.2f} dollars."
+age = 45
+name = "Jack"
+newTxt = "The name is {1}. {1} is {0} years old"
+firstOrder = "We want {} pieces of item number {} for {:.2f} dollars."
+secondOrder = "We want {0} pieces of item number {1} for {2:.2f} dollars."
 print(firstOrder.format(quantity,itemNumber, price))
+print(secondOrder.format(quantity,itemNumber, price))
+print(newTxt.format(age, name))
