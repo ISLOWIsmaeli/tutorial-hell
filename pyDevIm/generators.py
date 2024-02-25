@@ -2,6 +2,7 @@
 def Item():
     print("First item")
     yield 15
+    return
 
     print("Second item")
     yield 25
