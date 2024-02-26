@@ -1,0 +1,10 @@
+# newSquare = (i * i for i in range(7))
+# print(next(newSquare))
+# print(next(newSquare))
+# print(next(newSquare))
+# print(next(newSquare))
+# print(next(newSquare))
+# print(next(newSquare))
+# print(next(newSquare))
+import math
+print(sum(i*i for i in range(7) ))

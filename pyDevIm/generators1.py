@@ -20,3 +20,12 @@ newGenerat=squareSequence(7)
 #         break  
 for sqr in newGenerat:
     print(sqr)
+
+newSquare = (i * i for i in range(7))
+print(next(newSquare))
+print(next(newSquare))
+print(next(newSquare))
+print(next(newSquare))
+print(next(newSquare))
+print(next(newSquare))
+print(next(newSquare))
