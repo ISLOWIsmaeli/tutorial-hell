@@ -10,7 +10,11 @@ import re
 #     print("No match!")
 # metacharacters,findall,search,sub,split
 newTxt = "Python is very very easy to understand"
+anotherTxt = "Python is very fun"
+
 # x = re.findall("very",newTxt)
 # print(x)
 x=re.search("\s",newTxt)
+y= re.search("rain",anotherTxt)
 print("First white space position: ",x.start())
+print(y)
