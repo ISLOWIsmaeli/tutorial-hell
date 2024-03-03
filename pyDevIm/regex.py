@@ -18,3 +18,7 @@ x=re.search("\s",newTxt)
 y= re.search("rain",anotherTxt)
 print("First white space position: ",x.start())
 print(y)
+# split is used to return a list where the string has been split at each match
+splText= "Try to code with python"
+x=re.split("\s",splText)
+print(x)
