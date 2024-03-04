@@ -29,5 +29,6 @@ anotherTxt = "Python is very fun"
 
 #using span
 newTxt = "Code with Python now"
-x = re.search(r"\bC\w+",newTxt)
+x = re.search(r"\bP\w+",newTxt)
 print(x.span())
+print(x.string)
