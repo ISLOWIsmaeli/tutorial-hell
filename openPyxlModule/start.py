@@ -9,4 +9,7 @@ ws=wb.active
 ws.title = "Data"
 
 ws.append(['Lennox','Is','Great','!'])
+ws.append(['Lennox','Is','Great','!'])
+ws.append(['Lennox','Is','Great','!'])
+ws.append(['End',])
 wb.save('ismael.xlsx')
