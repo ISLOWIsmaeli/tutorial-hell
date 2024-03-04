@@ -32,3 +32,5 @@ newTxt = "Code with Python now"
 x = re.search(r"\bP\w+",newTxt)
 print(x.span())
 print(x.string)
+# group returns the part of the string where there was a match
+print(x.group())
