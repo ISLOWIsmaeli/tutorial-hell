@@ -23,6 +23,11 @@ anotherTxt = "Python is very fun"
 # x=re.split("\s",splText,2)#separation process is done twice
 # print(x)
 #sub replaces one or many matches with a string
-text="Python is very easy"
-x=re.sub("\s","$",text,1)
-print(x)
+# text="Python is very easy"
+# x=re.sub("\s","$",text,1) # substitute white space once
+# print(x)
+
+#using span
+newTxt = "Code with Python now"
+x = re.search(r"\bC\w+",newTxt)
+print(x.span())
