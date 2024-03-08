@@ -10,3 +10,10 @@ d1["Third: "]=45
 d1["Fourth: "]=50
 for k,v in d1.items():
     print(k,v)
+#deque is more memory efficient than the normal queing function
+q=collections.deque([20,25,30,35])
+q.appendleft(100)
+q.append(400)
+q.pop()
+q.popleft()
+print(q)
