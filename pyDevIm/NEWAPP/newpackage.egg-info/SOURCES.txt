@@ -1,0 +1,9 @@
+setup.py
+newpackage/__init__.py
+newpackage/greetings.py
+newpackage/newfunctions.py
+newpackage.egg-info/PKG-INFO
+newpackage.egg-info/SOURCES.txt
+newpackage.egg-info/dependency_links.txt
+newpackage.egg-info/not-zip-safe
+newpackage.egg-info/top_level.txt
