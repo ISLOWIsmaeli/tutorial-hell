@@ -14,18 +14,21 @@ for class_list in class_list_sheet.iter_rows(min_row=3,
                                              min_col=2,
                                              max_col=2,
                                              values_only=True):
+    counter=1
     classmate1=class_list[0]
     for without_ismael in projects_without_ismael_sheet.iter_rows(min_row=2,
                                                                   max_row=120,
                                                                   min_col=3,
                                                                   max_col=3,
                                                                 values_only=True):
+        counter=counter+1
         classmate2=without_ismael[0]
         if classmate1==classmate2:
-            print(classmate1,"has a group")
+            print(classmate1,"has a group at postion",counter,sep=": ")
             classmates_with_groups.append(classmate1)
             break
         else:
             pass
+        
     
 print(classmates_with_groups)
