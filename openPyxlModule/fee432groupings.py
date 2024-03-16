@@ -2,7 +2,7 @@ from openpyxl import load_workbook
 filename="groupings.xlsx"
 workbook = load_workbook(filename)
 mysheets = workbook.sheetnames
-print(mysheets)
+
 class_list_sheet=workbook[mysheets[0]]
 projects_without_ismael_sheet=workbook[mysheets[1]]
 projects_with_ismael_sheet=workbook[mysheets[2]]
@@ -28,8 +28,7 @@ for without_ismael in projects_without_ismael_sheet.iter_rows(min_row=2,
             class_list_sheet["C{}".format(counter)]=""
             class_list_sheet["D{}".format(counter)]=""
             class_list_sheet["E{}".format(counter)]=""
-            
-            # print()
+
             break
         else:
             pass
