@@ -28,10 +28,13 @@ print(random.choice(missionary_list))
 for missionary in missionary_list:
     pick=random.choice(missionary_list)
     index= missionary_list.index(pick)
+    print(index)
     for confirm in missionary_list:
         if pick == confirm:
             del missionary_list[index]
-            continue
-        elif ValueError:
+            print(confirm, " deleted.",sep="=")
+            break
+        else :
+            print("I have been here")
             continue
 print(missionary_list)
