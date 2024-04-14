@@ -1,13 +1,13 @@
 #come up with a 3 by 4 matrix
 #eliminate using gausss jordan
 #produce the answer
-def find_smallest(x,y,z):
-    smallest=x
-    if y < smallest:
-        smallest =y
-    if z < smallest:
-        smallest=z
-    return smallest
+# def find_smallest(x,y,z):
+#     smallest=x
+#     if y < smallest:
+#         smallest =y
+#     if z < smallest:
+#         smallest=z
+#     return smallest
 
 trial=[[2,1,2,8],[1,-3,3,-4],[4,2,-1,1]]
 minimum_value=float('inf')
