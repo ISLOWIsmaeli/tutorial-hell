@@ -21,7 +21,7 @@ for i in range(row - 1):  #  Forward Elimination
     while pivot_row < row and matrix[pivot_row][i] == 0:
         pivot_row += 1
     if pivot_row == row:
-        print("No unique solution exists")
+        print("No solution exists")
         exit()
 
     if pivot_row != i:  #  Swap rows if necessary
@@ -34,7 +34,7 @@ for i in range(row - 1):  #  Forward Elimination
 
 
 if matrix[row - 1][row - 1] == 0:
-    print("No unique solution exists")
+    print("No solution exists")
     exit()
 
 
@@ -46,5 +46,15 @@ for i in range(row - 2, -1, -1):
         sum_val -= matrix[i][j] * solution[j]
     solution[i] = sum_val / matrix[i][i]
 
-
+print("""The final reduced matrix is:\n""")
+for i in range(row):
+    print("|",end="")
+    for j in range(column):
+        print(matrix[i][j],end=" ")
+    print("|",end="\n")
+        
 print("\nThe solution is:", solution)
+
+for i in solution:
+    # print(f"x{i+1} = ",solution[i],end="\n")
+    print(int(solution[i]))
