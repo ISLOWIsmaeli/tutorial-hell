@@ -1,27 +1,31 @@
 import pandas as pd
 import random
+from openpyxl import load_workbook
+from openpyxl.utils.dataframe import dataframe_to_rows
 
-data_from_class_list=pd.read_excel("C:\\Users\\Lennox\Documents\\myProjects\\tutorials\\tutorial-hell\openPyxlModule\\NUMERICAL METHODS CLASS LIST (1).xlsx")
-regno_data_list=[]
-names_data_list=[]
+excel_file = '' # replace with the path to your excel file, remember to use '\\' for windows and '/' for UNIX (mac and linux)
+sheet_name = 'Class List'
+df = pd.read_excel(excel_file, sheet_name=sheet_name)
+random.seed()
+df = df.sample(frac=1).reset_index(drop=True)
+groups = []
+group_size = 3
 
-tuple_list=[]
-final_list=[]
+for i in range(0, len(df), group_size):
+    groups.append(df.iloc[i:i + group_size])
 
-for student in data_from_class_list:
-    regno_data_list.append(student[0])
-    names_data_list.append(student[1])
-    tuple_list=zip(regno_data_list,names_data_list)
-final_list=list(tuple_list)
+output_file = '' # replace with the path to your output excel file, , remember to use '\\' for windows and '/' for UNIX (mac and linux)
+output_sheet_name = 'Sorted Class List'
+wb = load_workbook(output_file)
 
-groups_with_allocated_students={}
-students_data_copy=final_list.copy()
+if output_sheet_name in wb.sheetnames:
+    ws = wb[output_sheet_name]
+else:
+    ws = wb.create_sheet(output_sheet_name)
 
-for group_index in range(len(final_list)):
-    selected_student=random.choice(students_data_copy)
-    try:
-        groups_with_allocated_students[group_index%5].append(selected_student)
-    except KeyError as group_not_yet_created:
-        groups_with_allocated_students[group_index%5]=[selected_student]
-    students_data_copy.remove(selected_student)
-print(groups_with_allocated_students)
+ws.append(["Group", "Registration Number", "Name"])
+for i, group in enumerate(groups, start=1):
+    for row in dataframe_to_rows(group, index=False, header=False):
+        ws.append([f"Group {i}", *row])
+
+wb.save(output_file)
